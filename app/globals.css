@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  background: #000000;
+  color: #cccccc;
+  /* overflow-x: hidden; */
+}
+
+.bg-image {
+  background-image: url("../public/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-gradient {
+  position: absolute;
+  width: 200px;
+  height: 400px;
+
+  right: 0%;
+  top: 10%;
+  z-index: 0;
+
+  background: #6e2b7e;
+  filter: blur(180px);
+}
+
+@layer components {
+  .main-container {
+    @apply relative my-32 sm:my-24 md:my-32 lg:my-32 xl:my-56 flex flex-col gap-6 sm:gap-10 md:gap-16 justify-center items-center;
+  }
+}
